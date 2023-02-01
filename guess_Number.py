@@ -8,6 +8,7 @@ while count < 3:
     guess = int(input("Take a guess: "))
     if guess == num:
         print("Well done, you guess correctly")
+        break
     elif guess < num:
         print("Incorrect, the number is bigger")
         count += 1
@@ -15,4 +16,5 @@ while count < 3:
         print("Incorrect, the number is smaller")
         count += 1
 
-print(f"Unlucky, the number was {num}")
+if count == 3:
+    print(f"Unlucky, the number was {num}")
